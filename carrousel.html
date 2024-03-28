@@ -35,6 +35,18 @@
 				background-color: var(--purple);
 			}
 
+			button {
+				display: flex;
+				justify-content: center;
+				flex-direction: row-reverse ;
+			}
+
+			button:nth-child(2) {
+				display: flex;
+				justify-content: flex-end;
+
+			}
+
 			/* Hint: welk layout model is handig om content naast elkaar te zetten? */
 		</style>
 		<script type="module">
@@ -68,8 +80,12 @@
 		<article>
 			<blockquote>“Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5”</blockquote>
 		</article>
+
 		
 	</section>
+	
+	<button class="fdnd-button">Vorige</button>
+	<button class="fdnd-button">Volgende</button>
 
 		<details>
 			<summary>Demo video</summary>
