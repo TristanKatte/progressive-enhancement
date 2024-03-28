@@ -14,16 +14,22 @@
 				font-style: italic;
 				text-align: center;
 				overflow-x: auto;
-				scroll-snap-align: center;
+				scroll-snap-type: x mandatory;
+				word-wrap: break-word;
 				
-				
-				
+			}
+
+			blockquote {
+				word-wrap: break-word;
 			}
 
 			article {
 				background-color: var(--green);
 				padding-block: 2em;
 				flex-shrink: 0;
+				scroll-snap-align: center;
+				flex-basis: 100%;
+
 				
 			}
 
