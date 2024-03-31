@@ -7,6 +7,34 @@
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
+article.tabs
+{
+	position: relative;
+	display: block;
+	width: 40em;
+	height: 15em;
+	margin: 2em auto;
+}
+
+article.tabs section
+{
+	position: absolute;
+	display: block;
+	top: 1.8em;
+	left: 0;
+	height: 12em;
+	padding: 10px 20px;
+	background-color: #ddd;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	z-index: 0;
+}
+
+article.tabs section:first-child
+{
+	z-index: 1;
+}
+
 
 			/* Hint: kijk eens naar de :target selector */
 		</style>
@@ -18,28 +46,44 @@
 		<h1>Tabbladen</h1>
 
 		<!-- Hint: vraag je af wat tabbladen eigenlijk zijn -->
+<article class="tabs">
 
-		Content
+	<section id="tab1">
+		<h2><a href="#tab1">Docenten</a></h2>
+	</section>
 
-		Docenten
-		Sprints
-		Gedragscriteria
-		Open avond
-	<nav>
-		<ol>
-			<li>Berat Zekaj</li>
-			<li>Charley Muhren</li>
-			<li>Cyd Stumpel</li>
-			<li>Dorien Drees</li>
-			<li>Joost Faber</li>
-			<li>Justus Sturkenboom</li>
-			<li>Koop Reijnders</li>
-			<li>Krijn Hoetmer</li>
-			<li>Sanne 't Hooft</li>
-			<li>Suus ten Voorde</li>
-		</ol>
-	</nav>
-		<ol>
+	<section id="tab1">
+		<h2><a href="#tab1">Sprints</a></h2>
+	</section>
+
+	<section id="tab1">
+		<h2><a href="#tab1">Gedragscriteria</a></h2>
+	</section>
+
+	<section id="tab1">
+		<h2><a href="#tab1">Open avond</a></h2>
+	</section>
+		
+		
+		
+</article>
+
+
+			<ol>
+				<li>Berat Zekaj</li>
+				<li>Charley Muhren</li>
+				<li>Cyd Stumpel</li>
+				<li>Dorien Drees</li>
+				<li>Joost Faber</li>
+				<li>Justus Sturkenboom</li>
+				<li>Koop Reijnders</li>
+				<li>Krijn Hoetmer</li>
+				<li>Sanne 't Hooft</li>
+				<li>Suus ten Voorde</li>
+			</ol>
+
+		
+			<ol>
 			<li>Your Tribe</li>
 			<li>The Client</li>
 			<li>All Human</li>
