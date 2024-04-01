@@ -1,74 +1,119 @@
 <!doctype html>
 <html lang="nl">
-	<head>
-		<meta charset="utf-8">
-		<title>Tabbladen / Progressive Enhancement / FDND</title>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link href="assets/styles.css" rel="stylesheet">
-		<style>
-			/* Schrijf hier gewoon je CSS voor dit component */
-article.tabs
+
+<head>
+	<meta charset="utf-8">
+	<title>Tabbladen / Progressive Enhancement / FDND</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+		rel="stylesheet">
+	<link href="assets/styles.css" rel="stylesheet">
+	<style>
+		/* Schrijf hier gewoon je CSS voor dit component */
+		article.tabs {
+			position: relative;
+			display: flex;
+			justify-content: space-evenly;
+			width: 40em;
+			height: 50em;
+			margin: 2em auto;
+		}
+
+		article.tabs section {
+			position: absolute;
+			display: block;
+			top: 1.8em;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 2em;
+			background-color: #ddd;
+			border-radius: 15px;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+			z-index: 0;
+		}
+
+		article.tabs section:first-child {
+			z-index: 1;
+		}
+
+		article.tabs section h2
 {
-	position: relative;
-	display: block;
-	width: 40em;
-	height: 15em;
-	margin: 2em auto;
+			position: absolute;
+			font-size: 1em;
+			font-weight: normal;
+			width: 120px;
+			height: 1.8em;
+			top: -1.8em;
+			left: 0px;
+			padding: -0.8em;
+			margin: 0;
+			color: #999;
+			background-color: #ddd;
+			border-bottom: none;
+			border-radius: 5px 5px 0 0;
 }
 
-article.tabs section
+		.tabs section:nth-child(2) h2
+		{
+			left: 142px;
+		}
+
+		article.tabs section:nth-child(3) h2
+		{
+			left: 284px;
+		}
+
+		article.tabs section:nth-child(4) h2
+		{
+			left: 416px;
+		}
+
+		article.tabs section h2 a
 {
-	position: absolute;
-	display: block;
-	top: 1.8em;
-	left: 0;
-	height: 12em;
-	padding: 10px 20px;
-	background-color: #ddd;
-	border-radius: 5px;
-	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
-	z-index: 0;
+			display: block;
+			width: 100%;
+			line-height: 1.8em;
+			text-align: center;
+			text-decoration: none;
+			color: inherit;
+			outline: 0 none;
 }
 
-article.tabs section:first-child
+article.tabs section:target,
+article.tabs section:target h2
 {
-	z-index: 1;
+	color: #333;
+	background-color: #fff;
+	z-index: 2;
+}
+
+article.tabs section,
+article.tabs section h2
+{
+
+	transition: all 500ms ease;
 }
 
 
-			/* Hint: kijk eens naar de :target selector */
-		</style>
-		<script type="module">
-			/* Schrijf hier eventueel je client-side JavaScript */
+
+		/* Hint: kijk eens naar de :target selector */
+	</style>
+	<script type="module">
+		/* Schrijf hier eventueel je client-side JavaScript */
 		</script>
-	</head>
-	<body>
-		<h1>Tabbladen</h1>
+</head>
 
-		<!-- Hint: vraag je af wat tabbladen eigenlijk zijn -->
-<article class="tabs">
+<body>
+	<h1>Tabbladen</h1>
 
-	<section id="tab1">
-		<h2><a href="#tab1">Docenten</a></h2>
-	</section>
-
-	<section id="tab1">
-		<h2><a href="#tab1">Sprints</a></h2>
-	</section>
-
-	<section id="tab1">
-		<h2><a href="#tab1">Gedragscriteria</a></h2>
-	</section>
-
-	<section id="tab1">
-		<h2><a href="#tab1">Open avond</a></h2>
-	</section>
-		
-		
-		
-</article>
+	<!-- Hint: vraag je af wat tabbladen eigenlijk zijn -->
 
 
+	<article class="tabs">
+
+		<section id="tab1">
+			<h2><a href="#tab1">Docenten</a></h2>
+			<p>
 			<ol>
 				<li>Berat Zekaj</li>
 				<li>Charley Muhren</li>
@@ -81,80 +126,119 @@ article.tabs section:first-child
 				<li>Sanne 't Hooft</li>
 				<li>Suus ten Voorde</li>
 			</ol>
-
+		</p>
+			<p class="tabnav"><a href="#tab2">next ➧</a></p>
+		</section>
 		
-			<ol>
-			<li>Your Tribe</li>
-			<li>The Client</li>
-			<li>All Human</li>
-			<li>Look and Feel</li>
-			<li>Fix the Flow</li>
-			<li>The Startup</li>
-			<li>Connect Your Tribe</li>
-			<li>Server-Side Rendering</li>
-			<li>The Web is for Everyone</li>
-			<li>Performance Matters</li>
-			<li>Connecting People</li>
-			<li>Proof of Concept</li>
-			<li>Your Tribe for Life</li>
-			<li>Lose Your Head</li>
-			<li>Choices, Choices</li>
-			<li>Don't Repeat Yourself</li>
-			<li>Back to Static</li>
-			<li>Let's JAM</li>
-			<li>Free Space</li>
-			<li>Final Sprint</li>
-		</ol>
-
-		<ol>
-			<li>Methodisch handelen
+		<section id="tab2">
+			<h2><a href="#tab2">Sprints</a></h2>
+			<p>
 				<ol>
-					<li>Kiest binnen projecten passende fases van de development-lifecycle.</li>
-					<li>Combineert aangeboden principes en conventies op het gebied van frontend design en development.</li>
-					<li>Houdt in beginnende mate rekening met de belangen van de eindgebruiker bij het realiseren van een oplossing voor een opdrachtgever.</li>
+					<li>Your Tribe</li>
+					<li>The Client</li>
+					<li>All Human</li>
+					<li>Look and Feel</li>
+					<li>Fix the Flow</li>
+					<li>The Startup</li>
+					<li>Connect Your Tribe</li>
+					<li>Server-Side Rendering</li>
+					<li>The Web is for Everyone</li>
+					<li>Performance Matters</li>
+					<li>Connecting People</li>
+					<li>Proof of Concept</li>
+					<li>Your Tribe for Life</li>
+					<li>Lose Your Head</li>
+					<li>Choices, Choices</li>
+					<li>Don't Repeat Yourself</li>
+					<li>Back to Static</li>
+					<li>Let's JAM</li>
+					<li>Free Space</li>
+					<li>Final Sprint</li>
 				</ol>
-			</li>
-			<li>Samenwerken
-				<ol>
-					<li>Werkt in teams, vraagt begeleiding waar nodig en geeft feedback aan teamleden.</li>
-					<li>Draagt verantwoording voor eigen resultaten, verwerkt ontvangen feedback en wijst teamleden op hun verantwoording.</li>
-					<li>Identificeert diversiteit binnen teams en handelt respectvol naar anderen.</li>
-				</ol>
-			</li>
-			<li>Communiceren
-				<ol>
-					<li>Luistert en vraagt door, neemt wat een ander zegt serieus.</li>
-					<li>Kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden.</li>
-					<li>Documenteert op professionele wijze en houdt voortgang bij.</li>
-				</ol>
-			</li>
-			<li>Probleemoplossend vermogen
-				<ol>
-					<li>Analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting.</li>
-					<li>Schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen.</li>
-					<li>Bedenkt en implementeert complexere frontend code en gebruikt daarbij API's en databases.</li>
-				</ol>
-			</li>
-			<li>Lerend vermogen
-				<ol>
-					<li>Volgt aangeboden internationale ontwikkelingen in het vakgebied.</li>
-					<li>Maakt aangeboden en zelf gevonden materie eigen en gebruikt dit bij leertaken, deelt ervaring binnen de squad.</li>
-					<li>Kent eigen capaciteiten en beperkingen, vergelijkt dit met het vermogen van anderen en maakt dit bespreekbaar.</li>
-				</ol>
-			</li>
-		</ol>
-
-		<p>Open avond 16 april</p>
-		<p>Op de open dag proef je de sfeer en ontdek je hoe het is om aan de HvA te studeren. Je maakt kennis met studenten en docenten van de opleiding.</p>
-		<p>Stel je vragen over studiekeuze, studeren met een functiebeperking en toelating op het studiekeuzeplein. Heb je nog vragen over de opleiding? We staan tijdens de open dag/avond klaar om al jouw vragen te beantwoorden.</p>
-
+			</p>
+			<p class="tabnav"><a href="#tab3">next ➧</a></p>
+		</section>
 		
+		<section id="tab3">
+			<h2><a href="#tab3">Gedragscriteria</a></h2>
+			<p>
+				<ol>
+					<li>Methodisch handelen
+						<ol>
+							<li>Kiest binnen projecten passende fases van de development-lifecycle.</li>
+							<li>Combineert aangeboden principes en conventies op het gebied van frontend design en development.</li>
+							<li>Houdt in beginnende mate rekening met de belangen van de eindgebruiker bij het realiseren van een
+								oplossing voor een opdrachtgever.</li>
+						</ol>
+					</li>
+					<li>Samenwerken
+						<ol>
+							<li>Werkt in teams, vraagt begeleiding waar nodig en geeft feedback aan teamleden.</li>
+							<li>Draagt verantwoording voor eigen resultaten, verwerkt ontvangen feedback en wijst teamleden op hun
+								verantwoording.</li>
+							<li>Identificeert diversiteit binnen teams en handelt respectvol naar anderen.</li>
+						</ol>
+					</li>
+					<li>Communiceren
+						<ol>
+							<li>Luistert en vraagt door, neemt wat een ander zegt serieus.</li>
+							<li>Kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden.</li>
+							<li>Documenteert op professionele wijze en houdt voortgang bij.</li>
+						</ol>
+					</li>
+					<li>Probleemoplossend vermogen
+						<ol>
+							<li>Analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting.</li>
+							<li>Schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen.</li>
+							<li>Bedenkt en implementeert complexere frontend code en gebruikt daarbij API's en databases.</li>
+						</ol>
+					</li>
+					<li>Lerend vermogen
+						<ol>
+							<li>Volgt aangeboden internationale ontwikkelingen in het vakgebied.</li>
+							<li>Maakt aangeboden en zelf gevonden materie eigen en gebruikt dit bij leertaken, deelt ervaring binnen
+								de squad.</li>
+							<li>Kent eigen capaciteiten en beperkingen, vergelijkt dit met het vermogen van anderen en maakt dit
+								bespreekbaar.</li>
+						</ol>
+					</li>
+				</ol>
+			</p>
+			<p class="tabnav"><a href="#tab4">next ➧</a></p>
+		</section>
 
-		<details>
-			<summary>Demo video</summary>
-			<video src="assets/tabs.mp4" width="1298" height="505" controls muted autoplay loop>
-				<a href="assets/tabs.mp4">assets/tabs.mp4</a>
-			</video>
-		</details>
-	</body>
+		<section id="tab4">
+			<h2><a href="#tab4">Open Avond</a></h2>
+			<p>Open avond 16 april</p>
+			<p>Op de open dag proef je de sfeer en ontdek je hoe het is om aan de HvA te studeren. Je maakt kennis met studenten
+				en docenten van de opleiding.</p>
+			<p>Stel je vragen over studiekeuze, studeren met een functiebeperking en toelating op het studiekeuzeplein. Heb je
+				nog vragen over de opleiding? We staan tijdens de open dag/avond klaar om al jouw vragen te beantwoorden.</p>
+			
+			<p class="tabnav"><a href="#tab4">next ➧</a></p>
+		</section>
+	
+	</article>
+
+
+	
+
+
+	
+
+	
+
+	
+	
+
+
+
+	<details>
+		<summary>Demo video</summary>
+		<video src="assets/tabs.mp4" width="1298" height="505" controls muted autoplay loop>
+			<a href="assets/tabs.mp4">assets/tabs.mp4</a>
+		</video>
+	</details>
+</body>
+
 </html>
