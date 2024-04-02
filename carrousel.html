@@ -9,7 +9,7 @@
 			/* Schrijf hier gewoon je CSS voor dit component */
 			section {
 				display: flex;
-				font-size: 3em;
+				font-size: 2.5em;
 				font-weight: bold;
 				font-style: italic;
 				text-align: center;
@@ -25,12 +25,10 @@
 
 			article {
 				background-color: var(--green);
-				padding-block: 2em;
+				padding-block: 2.8em;
 				flex-shrink: 0;
 				scroll-snap-align: center;
 				flex-basis: 100%;
-
-				
 			}
 
 			article:nth-of-type(2n) {
@@ -42,15 +40,22 @@
 			}
 
 			button {
-				padding: 2.5em;
 				position: absolute;
-				left: 5%;
+				
 			}
 
-		button:nth-of-type(2){
-			position: relative;
-			left: 85%;
-		}
+			.vorige {
+				position: fixed;
+				bottom: 450px;
+				left: 25px;
+			}
+
+			.volgende {
+				position: fixed;
+				bottom: 450px;
+				right: 25px;
+			}
+
 
 		
 
@@ -90,11 +95,11 @@
 			<blockquote>“Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5”</blockquote>
 		</article>
 
-		
+		<button class="fdnd-button vorige">Vorige</button>
+		<button class="fdnd-button volgende">Volgende</button>
 	</section>
 	
-	<button class="fdnd-button">Vorige</button>
-	<button class="fdnd-button">Volgende</button>
+
 
 		<details>
 			<summary>Demo video</summary>
